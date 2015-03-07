@@ -29,6 +29,9 @@ Minimally, you'll need to set the HOSTS constant with location of your deploymen
 ```shell
 fab build
 ```
+The script assumes that you're logging in as the root user intially to get started, but certainly change that if your user is some other user with root privileges.
+
+You'll be prompted a few times for the password of the newly created operating system user. The default password, which is set in configuration.py, is setarealpassword.  As the password implies you should really consider setting a real password.  
 
 When you run ```fab build``` it calls the build() function in fabfile.py which in turn calls a number of other functions to install system packages, creates a user, installs virtualenv, etc.
 
