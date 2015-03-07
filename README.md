@@ -48,8 +48,10 @@ Here's a list of everything the script does and configures in order:
 - Creates a pip requirements file
 - Installs the requirements in a newly created virtualenv
 - Configures a Postgres user, password, and database
-- Creates and nginx and uwsgi conf file pointing to the newly cloned Django app
+- Creates an nginx and uwsgi conf file pointing to the newly cloned Django app
 - Creates a WSGI file in the project's directory if one doesn't already exist
 - Runs syncdb collectstatic to copy static files into the newly created static files path
 - Creates supervisor and celery conf files
 - Restarts nginx, uwsgi, and supervisor
+
+When you want to update the server with changes from git simply run ```fab update_from_git``` and it will git pull from the repository and restart nginx and uwsgi.
