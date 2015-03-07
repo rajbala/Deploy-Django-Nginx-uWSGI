@@ -1,8 +1,8 @@
 # Deploy Django with Nginx, uWSGI, Celery, and Supervisor
 
-This is Fabric script to automatically deploy a Django app with uWSGI and Nginx. It also installs Supervisor and Celery, but feel free to comment those portions out if you're not using them.  
+This is a Fabric script to automatically deploy a Django app with uWSGI and Nginx. It also installs Supervisor and Celery, but feel free to comment those portions out if you're not using them.  
 
-I wrote this on Ubuntu 14.04, but *should* work on Red Hat and its variants with minimal changes.  
+I wrote this on Ubuntu 14.04, but it *should* work on Red Hat and its variants with minimal changes.  
 
 **Step 1:  Install Fabric on your local machine**
 ```shell
