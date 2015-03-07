@@ -32,4 +32,5 @@ fab build
 
 When you run ```fab build``` it calls the build() function in fabfile.py which in turn calls a number of other functions to install system packages, creates a user, installs virtualenv, etc.
 
+The majority of your changes should be in configuration.py unless you're deploying on something other than Ubuntu/Debian or perhaps you don't want to install and configure a specific component such as Celery or Supervisor.
 
