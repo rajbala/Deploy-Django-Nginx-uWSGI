@@ -30,5 +30,6 @@ Minimally, you'll need to set the HOSTS constant with location of your deploymen
 fab build
 ```
 
+When you run ```fab build``` it calls the build() function in fabfile.py which in turn calls a number of other functions to install system packages, creates a user, installs virtualenv, etc.
 
 
