@@ -37,3 +37,19 @@ When you run ```fab build``` it calls the build() function in fabfile.py which i
 
 The majority of your changes should be in configuration.py unless you're deploying on something other than Ubuntu/Debian or perhaps you don't want to install and configure a specific component such as Celery or Supervisor.
 
+Here's a list of everything the script does and configures in order:
+
+- Runs apt-get update
+- Creates a new operating system user called django
+- Switches execution to this new django user
+- Installs the necessary operating system packages with apt-get
+- Creates a project path and a static files path
+- Clones a git repo containing a Django project
+- Creates a pip requirements file
+- Installs the requirements in a newly created virtualenv
+- Configures a Postgres user, password, and database
+- Creates and nginx and uwsgi conf file pointing to the newly cloned Django app
+- Creates a WSGI file in the project's directory if one doesn't already exist
+- Runs syncdb collectstatic to copy static files into the newly created static files path
+- Creates supervisor and celery conf files
+- Restarts nginx, uwsgi, and supervisor
