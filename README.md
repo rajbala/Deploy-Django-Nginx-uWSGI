@@ -9,7 +9,7 @@ I wrote this on Ubuntu 14.04, but *should* work on Red Hat and its variants with
 pip install fabric
 ```
 
-**Step 2:  Install Fabtools**
+**Step 2:  Install Fabtools on your local machine**
 ```shell
 pip install fabtools
 ```
