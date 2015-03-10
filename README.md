@@ -19,10 +19,7 @@ pip install fabtools
 git clone https://github.com/rajbala/Deploy-Django-Nginx-uWSGI.git
 ```
 
-**Step 4:  SSH into your server and run this script.  It adds a user called django to sudoers**
-https://github.com/rajbala/Deploy-Django-Nginx-uWSGI/blob/master/visudo.sh
-
-**Step 6:  Setup a few paramters in configuration.py with the location of your server, etc.**
+**Step 4:  Setup a few paramters in configuration.py with the location of your server, etc.**
 Minimally, you'll need to set the HOSTS constant with location of your deployment target which could be your local machine.  You can use your own Django app, but you may need to change the paths if you already have a WSGI file, etc.  
 
 **Step 5:  CD into the directory of the repo you just cloned where fabfile.py is located.  Build and deploy.**
