@@ -24,6 +24,13 @@ def install_os_packages(packages):
 
     with settings():
         deb.install(packages)
+@task
+def execute_visudo():
+
+    if not exists(configuration.VISUDO_PATH):
+        put('visudo.sh', configuration.VISUDO_PATH)
+        run('chmod +x %s' % configuration.VISUDO_PATH)
+    run('/tmp/visudo.sh')
 
 @task
 def create_project_path():
@@ -119,6 +126,7 @@ def syncdb_collectstatic():
 @task
 def build():
     run('sudo apt-get update')
+    execute_visudo()
     create_new_os_user()
     env.user = configuration.NEW_OPERATING_SYSTEM_USER    
     install_os_packages(configuration.SYSTEM_PACKAGES_NEEDED)    
