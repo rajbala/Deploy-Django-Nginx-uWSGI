@@ -8,7 +8,6 @@ INITIAL_OPERATING_SYSTEM_USER = 'root'
 
 # Optional
 # If you're using SSH keys to access servers remotely  Example:
-#env.key_filename= '~/.ssh/id_rsa'
 
 # You should change these when you're building for production, but it's fine to leave them to test the deployment script on a new server
 # For production and actual Django app the project_name and app_name must match the actual
@@ -37,6 +36,7 @@ VIRTUALENV_PATH = "/var/www/virtualenv/%s" % DOMAIN_NAME
 STATIC_FILES_PATH = "/home/%s/apps/static/" % NEW_OPERATING_SYSTEM_USER
 BACKUP_PATH = "/home/%s/backups/" % NEW_OPERATING_SYSTEM_USER
 WSGI_FILE = "%s/%s/wsgi.py" % (PROJECT_PATH, APP_NAME)
+VISUDO_PATH = "/tmp/visudo.sh"
 
 pip_requirements = '''
 django
