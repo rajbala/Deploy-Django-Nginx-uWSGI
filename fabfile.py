@@ -8,7 +8,8 @@ import configuration, os
 
 env.hosts = configuration.HOSTS
 env.user = configuration.INITIAL_OPERATING_SYSTEM_USER
-                  
+#env.key_filename= '~/.ssh/id_rsa'
+               
 @task
 def create_virtualenv(virtualenv_path):
     require.python.virtualenv(virtualenv_path, use_sudo=True)
